@@ -1,0 +1,9 @@
+.result-container {
+  max-width: 500px;
+  margin: 0 auto 0 auto;
+  padding-top: 1.5rem;
+}
+
+.result-attr-container {
+  text-align: left;
+}
