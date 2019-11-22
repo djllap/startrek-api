@@ -16,7 +16,7 @@ export default class Result extends React.Component {
   render() {
     return (
       <div className="result-container">
-        <h2 className="result-name">{this.props.name}</h2>
+        <h3 className="result-name">{this.props.name}</h3>
         {this.attrs()}
       </div>
     );
