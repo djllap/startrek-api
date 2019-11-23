@@ -13,9 +13,7 @@ export default function SearchBox(props) {
         toggleCheck={props.toggleCheck}  
       />
     );
-  })
-  console.log(checkboxes);
-  
+  })  
 
   return (
     <div className='search-box'>

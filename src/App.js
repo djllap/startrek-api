@@ -21,6 +21,7 @@ class App extends Component {
   APIbase = 'https://swapi.co/api'
 
   getData = (terms, category) => {
+    this.clearResults();
     fetch(`${this.APIbase}/${category}/?search=${terms}`)
       .then(res => {
         return res.json();
@@ -31,6 +32,14 @@ class App extends Component {
       }).catch(e => {
 
       })
+  }
+
+  clearResults = () => {
+    this.setState({peopleResults: []});
+    this.setState({planetsResults: []});
+    this.setState({starshipsResults: []});
+    this.setState({vehiclesResults: []});
+    this.setState({speciesResults: []});
   }
   
   setHomeworlds = () => {
@@ -57,7 +66,6 @@ class App extends Component {
         }).then(species => {
           result.species = species.name;
           resultsCopy[key] = result;
-          console.log(resultsCopy);
           this.setState({peopleResults: resultsCopy});
         });
     })
